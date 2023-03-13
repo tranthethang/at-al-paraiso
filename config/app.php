@@ -195,6 +195,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Remove this line. Because, Telescope only use on localhost.
+        // https://laravel.com/docs/10.x/telescope#local-only-installation
+        // App\Providers\TelescopeServiceProvider::class,
+
     ],
 
     /*
