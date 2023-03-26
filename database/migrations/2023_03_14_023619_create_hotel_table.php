@@ -14,11 +14,13 @@ return new class extends Migration {
     {
         Schema::create('hotel', function (Blueprint $table) {
             $table->id();
-            $table->string('hotel_name');
+            $table->string('hotel_name', 128);
             $table->text('description')->nullable();
-            $table->integer('category_id');
+            $table->unsignedBigInteger('category_id');
             $table->boolean('is_active');
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
         });
     }
 

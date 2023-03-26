@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('reservation_status_catalog', function (Blueprint $table) {
             $table->id();
+            $table->string('status_name', 128);
             $table->timestamps();
         });
     }

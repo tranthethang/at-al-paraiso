@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('channel', function (Blueprint $table) {
             $table->id();
+            $table->string('channel_name', 128);
             $table->timestamps();
         });
     }

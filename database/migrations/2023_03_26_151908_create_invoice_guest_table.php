@@ -8,31 +8,29 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('synchronization', function (Blueprint $table) {
+        Schema::create('invoice_guest', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('guest_id');
             $table->unsignedBigInteger('reservation_id');
-            $table->unsignedBigInteger('channel_id');
-            $table->text('message_sent');
-            $table->text('message_received');
+            $table->float('invoice_amount');
+            $table->timestamp('issued_at');
+            $table->timestamp('paid_at');
+            $table->timestamp('canceled_at');
             $table->timestamps();
 
+            $table->foreign('guest_id')->references('id')->on('guest')->onDelete('cascade');
             $table->foreign('reservation_id')->references('id')->on('reservation')->onDelete('cascade');
-            $table->foreign('channel_id')->references('id')->on('channel')->onDelete('cascade');
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('synchronization');
+        Schema::dropIfExists('invoice_guest');
     }
 };

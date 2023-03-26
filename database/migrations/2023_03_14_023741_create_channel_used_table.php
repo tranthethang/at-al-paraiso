@@ -14,7 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('channel_used', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('room_id');
+            $table->unsignedBigInteger('channel_id');
+
+            //FOREIGN KEY CONSTRAINTS
+            $table->foreign('room_id')->references('id')->on('room')->onDelete('cascade');
+            $table->foreign('channel_id')->references('id')->on('channel')->onDelete('cascade');
+
+            //SETTING THE PRIMARY KEYS
+            $table->primary(['room_id','channel_id']);
+
             $table->timestamps();
         });
     }
