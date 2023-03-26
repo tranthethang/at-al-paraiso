@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "afdc20671177a955b9180f52b84dc6e5",
+    "content-hash": "1bb729c6a95c5fb7f7570897e5b7bb8f",
     "packages": [
         {
             "name": "brick/math",
@@ -2705,6 +2705,54 @@
                 }
             ],
             "time": "2021-06-28T04:27:21+00:00"
+        },
+        {
+            "name": "mennovanhout/laravel-model-constants",
+            "version": "v0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mennovanhout/laravel-model-constants.git",
+                "reference": "06ea44cf22c128704d1e0db61594b93d79e28691"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mennovanhout/laravel-model-constants/zipball/06ea44cf22c128704d1e0db61594b93d79e28691",
+                "reference": "06ea44cf22c128704d1e0db61594b93d79e28691",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.0|^9.0|^10.0",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MennoVanHout\\LaravelModelConstants\\Providers\\LaravelModelConstantsProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MennoVanHout\\LaravelModelConstants\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Menno van Hout",
+                    "email": "info@mennovanhout.nl"
+                }
+            ],
+            "description": "This package creates constants for column names, this can then be used instead of strings to reduce typo's errors and improve coding with your IDE",
+            "support": {
+                "issues": "https://github.com/mennovanhout/laravel-model-constants/issues",
+                "source": "https://github.com/mennovanhout/laravel-model-constants/tree/v0.9.1"
+            },
+            "time": "2023-03-15T11:00:33+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -8615,6 +8663,69 @@
                 }
             ],
             "time": "2023-03-09T06:34:10+00:00"
+        },
+        {
+            "name": "reliese/laravel",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reliese/laravel.git",
+                "reference": "5e23e1661504db5d3b05a1196526236ef8b5172a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reliese/laravel/zipball/5e23e1661504db5d3b05a1196526236ef8b5172a",
+                "reference": "5e23e1661504db5d3b05a1196526236ef8b5172a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": ">=2.5",
+                "illuminate/console": ">=5.1",
+                "illuminate/contracts": ">=5.1",
+                "illuminate/database": ">=5.1",
+                "illuminate/filesystem": ">=5.1",
+                "illuminate/support": ">=5.1",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "~1.4",
+                "mockery/mockery": ">=1.4",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Reliese\\Coders\\CodersServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Reliese\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Llanos",
+                    "email": "cristianllanos@outlook.com"
+                }
+            ],
+            "description": "Reliese Components for Laravel Framework code generation.",
+            "homepage": "http://cristianllanos.com",
+            "keywords": [
+                "laravel",
+                "reliese"
+            ],
+            "support": {
+                "issues": "https://github.com/reliese/laravel/issues",
+                "source": "https://github.com/reliese/laravel"
+            },
+            "time": "2023-03-10T16:05:19+00:00"
         },
         {
             "name": "sebastian/cli-parser",
