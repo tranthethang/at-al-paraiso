@@ -199,6 +199,7 @@ return [
         // https://laravel.com/docs/10.x/telescope#local-only-installation
         // App\Providers\TelescopeServiceProvider::class,
 
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
     ],
 
     /*

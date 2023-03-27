@@ -6,3 +6,4 @@
 #### Packages
 1. [Reliese Laravel Model Generator](https://github.com/reliese/laravel)
 2. [Laravel Model Constants](https://github.com/mennovanhout/laravel-model-constants)
+3. [Laravel 5 Repositories](https://github.com/andersao/l5-repository)
