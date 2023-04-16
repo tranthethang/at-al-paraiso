@@ -29,14 +29,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 /**
  * Custom Routers.
  */
 
 Route::middleware('auth')->group(function () {
-    // Add the following route to the existing routes because we want the posts route accessible to authenticated users only.
-    // We'll use a resource route because it contains all the exact routes we need for a typical CRUD application.
     Route::resource('categories', CategoryController::class);
 });
